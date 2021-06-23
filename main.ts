@@ -35,18 +35,18 @@ namespace Calino {
         speed: number) {
         if (motor === MotorType.left){
             if (direction === MotorDirection.forward){
-                pins.servoSetPulse(AnalogPin.C16, 1500 + speed*10);
+                pins.servoSetPulse(AnalogPin.C16, 1500 + speed*2);
             }
             else if (direction === MotorDirection.backward){
-                pins.servoSetPulse(AnalogPin.C16, 1500 - speed*10);
+                pins.servoSetPulse(AnalogPin.C16, 1500 - speed*2);
             }
         }
         else if (motor = MotorType.right){
             if (direction === MotorDirection.forward){
-                pins.servoSetPulse(AnalogPin.C17, 1500 - speed*10);
+                pins.servoSetPulse(AnalogPin.C17, 1500 - speed*2);
             }
             else if (direction === MotorDirection.backward){
-                pins.servoSetPulse(AnalogPin.C17, 1500 + speed*10);
+                pins.servoSetPulse(AnalogPin.C17, 1500 + speed*2);
             }
         }
     }

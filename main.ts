@@ -14,7 +14,7 @@ enum MotorType {
     right
 }
 
-namespace WvSSRoboKit {
+namespace Calino {
 
 	
     /*some parameters used for controlling the turn and length */

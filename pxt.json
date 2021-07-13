@@ -4,7 +4,8 @@
     "description": "",
     "dependencies": {
         "core": "*",
-        "radio": "*"
+        "radio": "*",
+        "Grove": "github:calliope-edu/pxt-grove#v0.2.7"
     },
     "files": [
         "README.md",

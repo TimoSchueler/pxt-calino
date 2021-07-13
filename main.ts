@@ -1,19 +1,15 @@
-//% weight=100 color=#00A654 icon="\uf1b9" block="WvSSRoboKit"
-
 enum MotorDirection {
     //% block="vorwärts"
     forward,
     //% block="rückwärts"
     backward
 }
-
 enum MotorType {
     //% block="links"
     left,
     //% block="rechts"
     right
 }
-
 namespace Calino {
 
 	
@@ -29,6 +25,7 @@ namespace Calino {
     //% block="Drehe Motor %motor in Richtung %direction mit Geschwindigkeit %speed "
     //% duration.shadow=timePicker
     //% expandableArgumentMode="toggle"
+    //% group="ParallaxFutubaServo"
     export function runMotor(
         motor: MotorType,
         direction: MotorDirection,

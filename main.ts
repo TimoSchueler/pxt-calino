@@ -55,8 +55,8 @@ namespace Calino {
     //% block="stop"
     //% group="Parallax Futuba Servo"
     export function stopMotorParallax(): void {
-        pins.analogWritePin(AnalogPin.C16, 0);
-        pins.analogWritePin(AnalogPin.C17, 0);
+        pins.analogWritePin(AnalogPin.C16, 1500);
+        pins.analogWritePin(AnalogPin.C17, 1500);
     }
 
     /**
@@ -96,8 +96,8 @@ namespace Calino {
     //% block="stop"
     //% group="EZRobot Servo"
     export function stopMotorEZRobot(): void {
-        pins.analogWritePin(AnalogPin.C16, 0);
-        pins.analogWritePin(AnalogPin.C17, 0);
+        pins.analogWritePin(AnalogPin.C16, 1345);
+        pins.analogWritePin(AnalogPin.C17, 1345);
     }
     
 }

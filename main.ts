@@ -25,8 +25,8 @@ namespace Calino {
     //% block="Drehe Motor %motor in Richtung %direction mit Geschwindigkeit %speed "
     //% duration.shadow=timePicker
     //% expandableArgumentMode="toggle"
-    //% group="ParallaxFutubaServo"
-    export function runMotor(
+    //% group="Parallax Futuba Servo"
+    export function runMotorParallax(
         motor: MotorType,
         direction: MotorDirection,
         speed: number) {
@@ -54,7 +54,48 @@ namespace Calino {
      */
     //% blockId=motion_kit_servos_stop
     //% block="stop"
-    export function stop(): void {
+    export function stopMotorParallax(): void {
+        pins.analogWritePin(AnalogPin.C16, 0);
+        pins.analogWritePin(AnalogPin.C17, 0);
+    }
+
+    /**
+     * Dreht einen Motor in die angegebene Richtung
+     * mit einer Geschwindigkeit zwischen 0 und 100%
+     */
+    //% block="Drehe Motor %motor in Richtung %direction mit Geschwindigkeit %speed "
+    //% duration.shadow=timePicker
+    //% expandableArgumentMode="toggle"
+    //% group="EZRobot Servo"
+    export function runMotorEZRobot(
+        motor: MotorType,
+        direction: MotorDirection,
+        speed: number) {
+        if (motor === MotorType.left){
+            if (direction === MotorDirection.forward){
+                pins.servoSetPulse(AnalogPin.C16, 1345 + speed*2);
+            }
+            else if (direction === MotorDirection.backward){
+                pins.servoSetPulse(AnalogPin.C16, 1345 - speed*2);
+            }
+        }
+        else if (motor = MotorType.right){
+            if (direction === MotorDirection.forward){
+                pins.servoSetPulse(AnalogPin.C17, 1345 - speed*2);
+            }
+            else if (direction === MotorDirection.backward){
+                pins.servoSetPulse(AnalogPin.C17, 1345 + speed*2);
+            }
+        }
+    }
+
+	
+    /**
+	 * Stoppt die Motoren
+     */
+    //% blockId=motion_kit_servos_stop
+    //% block="stop"
+    export function stopMotorEZRobot(): void {
         pins.analogWritePin(AnalogPin.C16, 0);
         pins.analogWritePin(AnalogPin.C17, 0);
     }

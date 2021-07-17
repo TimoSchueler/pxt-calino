@@ -55,8 +55,8 @@ namespace Calino {
     //% block="stop"
     //% group="Parallax Futuba Servo"
     export function stopMotor(): void {
-        pins.analogWritePin(AnalogPin.C16, 1500);
-        pins.analogWritePin(AnalogPin.C17, 1500);
+        pins.servoSetPulse(AnalogPin.C16, 1500);
+        pins.servoSetPulse(AnalogPin.C17, 1500);
     }
     
 }

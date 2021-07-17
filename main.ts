@@ -107,7 +107,7 @@ namespace Calino {
     //% block="Drehe Motor %motor in Richtung %direction mit Geschwindigkeit %speed "
     //% duration.shadow=timePicker
     //% expandableArgumentMode="toggle"
-    //% group="EZRobot Servo"
+    //% group="Fitech FS5103R Servo"
     export function runMotorEZRobot(
         motor: MotorType,
         direction: MotorDirection,

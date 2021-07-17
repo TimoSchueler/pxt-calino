@@ -108,7 +108,7 @@ namespace Calino {
     //% duration.shadow=timePicker
     //% expandableArgumentMode="toggle"
     //% group="Fitech FS5103R Servo"
-    export function runMotorEZRobot(
+    export function runMotorFitech(
         motor: MotorType,
         direction: MotorDirection,
         speed: number) {
@@ -136,7 +136,7 @@ namespace Calino {
      */
     //% block="stop"
     //% group="Fitech FS5103R Servo"
-    export function stopMotorEZRobot(): void {
+    export function stopMotorFitech(): void {
         pins.analogWritePin(AnalogPin.C16, 1500);
         pins.analogWritePin(AnalogPin.C17, 1500);
     }

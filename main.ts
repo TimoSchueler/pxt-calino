@@ -26,89 +26,7 @@ namespace Calino {
     //% duration.shadow=timePicker
     //% expandableArgumentMode="toggle"
     //% group="Parallax Futuba Servo"
-    export function runMotorParallax(
-        motor: MotorType,
-        direction: MotorDirection,
-        speed: number) {
-        if (motor === MotorType.left){
-            if (direction === MotorDirection.forward){
-                pins.servoSetPulse(AnalogPin.C16, 1500 + speed*2);
-            }
-            else if (direction === MotorDirection.backward){
-                pins.servoSetPulse(AnalogPin.C16, 1500 - speed*2);
-            }
-        }
-        else if (motor = MotorType.right){
-            if (direction === MotorDirection.forward){
-                pins.servoSetPulse(AnalogPin.C17, 1500 - speed*2);
-            }
-            else if (direction === MotorDirection.backward){
-                pins.servoSetPulse(AnalogPin.C17, 1500 + speed*2);
-            }
-        }
-    }
-
-	
-    /**
-	 * Stoppt die Motoren
-     */
-    //% block="stop"
-    //% group="Parallax Futuba Servo"
-    export function stopMotorParallax(): void {
-        pins.analogWritePin(AnalogPin.C16, 1500);
-        pins.analogWritePin(AnalogPin.C17, 1500);
-    }
-
-    /**
-     * Dreht einen Motor in die angegebene Richtung
-     * mit einer Geschwindigkeit zwischen 0 und 100%
-     */
-    //% block="Drehe Motor %motor in Richtung %direction mit Geschwindigkeit %speed "
-    //% duration.shadow=timePicker
-    //% expandableArgumentMode="toggle"
-    //% group="EZRobot Servo"
-    export function runMotorEZRobot(
-        motor: MotorType,
-        direction: MotorDirection,
-        speed: number) {
-        if (motor === MotorType.left){
-            if (direction === MotorDirection.forward){
-                pins.servoSetPulse(AnalogPin.C16, 1345 + speed*6);
-            }
-            else if (direction === MotorDirection.backward){
-                pins.servoSetPulse(AnalogPin.C16, 1345 - speed*6);
-            }
-        }
-        else if (motor = MotorType.right){
-            if (direction === MotorDirection.forward){
-                pins.servoSetPulse(AnalogPin.C17, 1345 - speed*6);
-            }
-            else if (direction === MotorDirection.backward){
-                pins.servoSetPulse(AnalogPin.C17, 1345 + speed*6);
-            }
-        }
-    }
-
-	
-    /**
-	 * Stoppt die Motoren
-     */
-    //% block="stop"
-    //% group="EZRobot Servo"
-    export function stopMotorEZRobot(): void {
-        pins.analogWritePin(AnalogPin.C16, 1345);
-        pins.analogWritePin(AnalogPin.C17, 1345);
-    }
-
-    /**
-     * Dreht einen Motor in die angegebene Richtung
-     * mit einer Geschwindigkeit zwischen 0 und 100%
-     */
-    //% block="Drehe Motor %motor in Richtung %direction mit Geschwindigkeit %speed "
-    //% duration.shadow=timePicker
-    //% expandableArgumentMode="toggle"
-    //% group="Fitech FS5103R Servo"
-    export function runMotorFitech(
+    export function runMotor(
         motor: MotorType,
         direction: MotorDirection,
         speed: number) {
@@ -135,11 +53,10 @@ namespace Calino {
 	 * Stoppt die Motoren
      */
     //% block="stop"
-    //% group="Fitech FS5103R Servo"
-    export function stopMotorFitech(): void {
+    //% group="Parallax Futuba Servo"
+    export function stopMotor(): void {
         pins.analogWritePin(AnalogPin.C16, 1500);
         pins.analogWritePin(AnalogPin.C17, 1500);
     }
-
     
 }
